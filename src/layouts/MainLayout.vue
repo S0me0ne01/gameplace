@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf" style="background-color: #2c0145">
     <!-- HEADER -->
     <q-header elevated>
-      <q-toolbar style="background-color: #2c0145">
+      <q-toolbar style="background-color: #220036">
         <q-btn flat dense round icon="menu" aria-label="Menu" style="color: #ffffff" @click="toggleLeftDrawer" />
 
         <q-toolbar-title>
@@ -29,7 +29,12 @@
 
     <div style="background: linear-gradient(to bottom, #2c0145, #31014c); color: white">
       <q-toolbar>
-        <q-toolbar-title header style="font-weight: bold">&nbsp; Coffee | 2023</q-toolbar-title>
+        <q-toolbar-title header style="font-weight: bold">
+          &nbsp; &nbsp; Coffee | 2023 | Abay Ave 2 &nbsp;
+          <a href="/" style="color: #3dd10c"><q-icon name="ion-logo-whatsapp" size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
+          <a href="/" style="color: #0ed1db"><q-icon name="ion-logo-twitter" size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
+          <a href="/" style="color: #bc0edb"><q-icon name="ion-logo-instagram" size="md"></q-icon></a>
+        </q-toolbar-title>
       </q-toolbar>
     </div>
   </q-layout>
@@ -42,20 +47,20 @@ import EssentialLink from 'components/EssentialLink.vue'
 const linksList = [
   {
     title: 'Instagram',
-    icon: 'photo_camera',
+    icon: 'ion-logo-instagram',
     caption: 'Ещё больше фото здесь',
     link: 'https://instagram.com'
   },
   {
     title: 'Twitter',
     caption: 'Наш аккаунт в Twitter',
-    icon: 'rss_feed',
+    icon: 'ion-logo-twitter',
     link: 'https://x.com'
   },
   {
-    title: 'Facebook',
-    caption: 'Мы в Facebook',
-    icon: 'public',
+    title: 'WhatsApp',
+    caption: 'Мы в WhatsApp',
+    icon: 'ion-logo-whatsapp',
     link: 'https://facebook.com'
   }
 ]
@@ -80,3 +85,30 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+a {
+  text-decoration: none;
+  color: #f1df83;
+}
+
+a:link {
+  text-decoration: none;
+  color: #f1df83;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #f1df83;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f1df83;
+}
+
+a:active {
+  text-decoration: none;
+  color: #f1df83;
+}
+</style>
