@@ -27,13 +27,15 @@
       <router-view />
     </q-page-container>
 
-    <div style="background: linear-gradient(to bottom, #2c0145, #31014c); color: white">
+    <div style="background: linear-gradient(to bottom, #ffffff, #ffffff)">
       <q-toolbar>
-        <q-toolbar-title header style="font-weight: bold">
-          &nbsp; &nbsp; Coffee | 2023 | Abay Ave 2 &nbsp;
-          <a href="/" style="color: #3dd10c"><q-icon name="ion-logo-whatsapp" size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
-          <a href="/" style="color: #0ed1db"><q-icon name="ion-logo-twitter" size="md"></q-icon>&nbsp;&nbsp;&nbsp;</a>
-          <a href="/" style="color: #bc0edb"><q-icon name="ion-logo-instagram" size="md"></q-icon></a>
+        <q-toolbar-title header style="font-weight: bold; font-size: 15px">
+          &nbsp; &nbsp; GamePlace 2023 &nbsp; Abay Ave 2 &nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp"
+              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter"
+              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" size="sm"></q-icon></a>
         </q-toolbar-title>
       </q-toolbar>
     </div>
