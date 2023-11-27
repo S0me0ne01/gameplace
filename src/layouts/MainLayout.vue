@@ -9,6 +9,18 @@
           &nbsp;&nbsp;<a href="/"><img src="/images/logo.png" height="50" style="padding-top: 8px" /></a>
         </q-toolbar-title>
 
+        <q-toolbar-title>
+          <q-btn flat color="white" icon="language">
+            <q-menu fit dark transition-show="scale" transition-hide="scale">
+              <q-list style="min-width: 100px">
+                <q-select dark v-model="locale" :options="localeOptions" dense borderless emit-value map-options
+                  options-dense style="min-width: 150px; padding: 10px">
+                </q-select>
+              </q-list>
+            </q-menu>
+          </q-btn>
+        </q-toolbar-title>
+
       </q-toolbar>
     </q-header>
 
@@ -16,7 +28,7 @@
       style="background: linear-gradient(to bottom, #2c0145, #31014c)">
       <q-list>
         <q-item-label header style="color: #ffffff">
-          Полезные ссылки
+          {{ $t('drawer.title') }}
         </q-item-label>
 
         <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
@@ -31,10 +43,8 @@
       <q-toolbar>
         <q-toolbar-title header style="font-weight: bold; font-size: 15px">
           &nbsp; &nbsp; GamePlace 2023 &nbsp; Abay Ave 2 &nbsp;
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp"
-              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
-          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter"
-              size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-whatsapp" size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
+          <a href="/" style="color: #000000"><q-icon name="ion-logo-twitter" size="sm"></q-icon></a>&nbsp;&nbsp;&nbsp;
           <a href="/" style="color: #000000"><q-icon name="ion-logo-instagram" size="sm"></q-icon></a>
         </q-toolbar-title>
       </q-toolbar>
@@ -44,24 +54,22 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
     title: 'Instagram',
     icon: 'ion-logo-instagram',
-    caption: 'Ещё больше фото здесь',
     link: 'https://instagram.com'
   },
   {
     title: 'Twitter',
-    caption: 'Наш аккаунт в Twitter',
     icon: 'ion-logo-twitter',
     link: 'https://x.com'
   },
   {
     title: 'WhatsApp',
-    caption: 'Мы в WhatsApp',
     icon: 'ion-logo-whatsapp',
     link: 'https://facebook.com'
   }
@@ -75,6 +83,7 @@ export default defineComponent({
   },
 
   setup() {
+    const { locale } = useI18n({ useScope: 'global' })
     const leftDrawerOpen = ref(false)
 
     return {
@@ -82,7 +91,13 @@ export default defineComponent({
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      }
+      },
+      locale,
+      localeOptions: [
+        { value: 'kz', label: 'KZ' },
+        { value: 'ru', label: 'RU' },
+        { value: 'en-US', label: 'EN' },
+      ]
     }
   }
 })

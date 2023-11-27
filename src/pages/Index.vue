@@ -11,20 +11,20 @@
 
       <div class="custom-item text-center">
         <q-avatar size="200px" icon="sports_esports" />
-        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Лучшая техника</p>
-        <p style="font-size: 25px">Используем только лучшее оборудование</p>
+        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">{{ $t('list.title1') }}</p>
+        <p style="font-size: 25px">{{ $t('list.text1') }}</p>
       </div>
 
       <div class="custom-item text-center">
         <q-avatar size="200px" icon="games" />
-        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Лицензионные игры</p>
-        <p style="font-size: 25px">Никакого пиратского ПО</p>
+        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">{{ $t('list.title2') }}</p>
+        <p style="font-size: 25px">{{ $t('list.text2') }}</p>
       </div>
 
       <div class="custom-item text-center">
         <q-avatar size="200px" icon="insert_emoticon" />
-        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">Классная атмосфера</p>
-        <p style="font-size: 25px">Гарантируем комфортный игровой опыт</p>
+        <p style="font-size: 40px; font-weight: bold; margin-top: 15px; margin-bottom: 10px">{{ $t('list.title3') }}</p>
+        <p style="font-size: 25px">{{ $t('list.text3') }}</p>
       </div>
 
     </div>
@@ -37,12 +37,11 @@
         <q-card dark class="my-card">
           <q-img src="/images/club2.jpeg" :ratio="16 / 12">
             <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
-              <p style="font-size: large; font-weight: bold">Тарифы</p>
-              <p style="font-size: large">Актуальная версия всех тарифов
-              </p>
+              <p style="font-size: large; font-weight: bold">{{ $t('content.title1') }}</p>
+              <p style="font-size: large">{{ $t('content.text1') }}</p>
 
               <p style="font-size: medium; font-weight: bold; text-shadow: 1px rgb(35, 35, 35)">
-                <q-btn outline rounded color="white" label="Показать" />
+                <q-btn outline rounded color="white" :label="$t('content.show1')" />
               </p>
             </div>
           </q-img>
@@ -55,8 +54,10 @@
           <q-img src="/images/club3.jpeg" :ratio="16 / 12">
 
             <div class="absolute-center" style="background: rgba(33, 33, 33, 0.8)">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.8932537808346!2d76.86659347608303!3d43.23269767112514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369a87d5f7551%3A0x8e70b7a65d73f497!2sAbay%20Ave%202%2C%20Almaty%20050000!5e0!3m2!1sen!2skz!4v1700214471126!5m2!1sen!2skz"
-                width="100%"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.8932537808346!2d76.86659347608303!3d43.23269767112514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369a87d5f7551%3A0x8e70b7a65d73f497!2sAbay%20Ave%202%2C%20Almaty%20050000!5e0!3m2!1sen!2skz!4v1700214471126!5m2!1sen!2skz"
+                width="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
 
